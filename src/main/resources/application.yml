@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: musicServiceDB
+  mongodb:
+    embedded:
+      version: 4.0.21
+
+apis:
+  music-brainz:
+    base-url: "https://musicbrainz.org"
+    get-uri: "/ws/2/artist/{id}?&fmt=json&inc=url-rels+release-groups"
+  wiki-data:
+    base-url: "https://www.wikidata.org"
+    get-uri: "/wiki/Special:EntityData/{id}.json"
+  wikipedia:
+    base-url: "https://en.wikipedia.org"
+    get-uri: "/api/rest_v1/page/summary/{title}"
+  cover-art:
+    base-url: "https://coverartarchive.org"
+    get-uri: "/release-group/{id}"
