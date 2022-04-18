@@ -2,6 +2,7 @@ package com.plugsurfing.musicservice.service
 
 import com.plugsurfing.musicservice.model.*
 import com.plugsurfing.musicservice.repository.ArtistRepository
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty

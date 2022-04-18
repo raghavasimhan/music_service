@@ -7,9 +7,9 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class MusicBrainzResponse(
     var id: String,
     var name: String,
-    var gender: String,
+    var gender: String?,
     var country: String,
-    var disambiguation: String,
+    var disambiguation: String?,
     var relations: ArrayList<Relation>,
     @JsonProperty("release-groups") var releaseGroups: List<ReleaseGroup>
 )
@@ -33,9 +33,9 @@ data class Album(var id: String, var title: String, var imageUrl : String?)
 @Document
 data class Artist(@Id var id : String,
                   var name: String,
-                  var gender: String,
+                  var gender: String?,
                   var country: String,
-                  var disambiguation: String,
+                  var disambiguation: String?,
                   var description: String,
                   var albums: List<Album> = emptyList()
 ) {
